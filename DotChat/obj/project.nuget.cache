@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ypMcHYhtyVwm5giDatXT7Z7dteiCX3oevWqbKgxJCK5nxwa/QCWr/lTDwlAKlVsVTVgk9vgpIHVwSH5DGSI3PA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\deagl\\Desktop\\Practics\\DotChat\\DotChat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deagl\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\deagl\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\deagl\\.nuget\\packages\\nstack.core\\0.14.0\\nstack.core.0.14.0.nupkg.sha512",
+    "C:\\Users\\deagl\\.nuget\\packages\\terminal.gui\\0.90.3\\terminal.gui.0.90.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.exe
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.deps.json
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.runtimeconfig.json
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.runtimeconfig.dev.json
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.dll
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\DotChat.pdb
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\NStack.dll
+C:\Users\deagl\Desktop\Practics\DotChat\bin\Debug\netcoreapp3.1\Terminal.Gui.dll
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.csprojAssemblyReference.cache
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.AssemblyInfoInputs.cache
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.AssemblyInfo.cs
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.csproj.CoreCompileInputs.cache
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.csproj.CopyComplete
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.dll
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.pdb
+C:\Users\deagl\Desktop\Practics\DotChat\obj\Debug\netcoreapp3.1\DotChat.genruntimeconfig.cache
