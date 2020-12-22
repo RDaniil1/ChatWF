@@ -86,6 +86,9 @@ namespace DotChat
  
         private static List<Message> messages = new List<Message>();
         private static bool isLog = false;
+        private static bool secondTimeVis = false;
+        private static int lastMsgID;
+        private static int messageCount = 0;
         static void Main(string[] args)
         {
             Application.Init();
@@ -192,8 +195,8 @@ namespace DotChat
             btnEmoji.Clicked += Emoji;
             winMain.Add(btnEmoji);
 
-           
-            int lastMsgID = 0;
+            messageCount = 0;
+            lastMsgID = 0;
             Timer updateLoop = new Timer();
             updateLoop.Interval = 1000;
             updateLoop.Elapsed += (object sender, ElapsedEventArgs e) => {
@@ -203,31 +206,51 @@ namespace DotChat
                     MessagesUpdate();
                     lastMsgID++;
                 }
+                msg = GetMessage(messageCount);
+                if (msg != null)
+                {
+                    messageCount++;
+                    msg = GetMessage(messageCount);
+                }
+                else if (msg == null && messageCount < lastMsgID)
+                {
+                    messages.Clear();
+                    lastMsgID = 0;
+                }
+                else if (lastMsgID == messageCount)
+                    messageCount = 0;
+
             };
             updateLoop.Start();
-            Application.Run();
+            try
+            {
+                Application.Run();
+            }
+            catch { }
+
         }
 
      
         static void OnBtnSendClick() {
             if (fieldUsername.Text.Length != 0 && fieldMessage.Text.Length != 0)
             {
-                Message msg = new Message()
-                {
-                    username = fieldUsername.Text.ToString(),
-                    text = fieldMessage.Text.ToString(),
-                };
+                    Message msg = new Message()
+                    {
+                        username = fieldUsername.Text.ToString(),
+                        text = fieldMessage.Text.ToString(),
+                    };
                 SendMessage(msg);
                 fieldMessage.Text = "";
             }
             MessagesUpdate();
+
         }
 
         
         static void MessagesUpdate() {
             winMessages.RemoveAll();
             int offset = 0;
-            for (var i = messages.Count - 1; i >= 0; i--) {
+            for (var i = 0; i <= messages.Count - 1; i++) {
                 View msg = new View() { 
                     X = 0, Y = offset,
                     Width = winMessages.Width,
@@ -235,11 +258,16 @@ namespace DotChat
                     Text = $"[{messages[i].username}] {messages[i].text} {messages[i].timestamp}",
                 };
                 winMessages.Add(msg);
+                
                 offset++;
             }
             Application.Refresh();
         }
 
+        static void DeleteMsg()
+        {
+
+        }
       
         static void SendMessage(Message msg) {
             if (isLog) {
@@ -274,12 +302,15 @@ namespace DotChat
         {
             string pass1 = Convert.ToString(textFieldPassword.Text);
             string pass2 = Convert.ToString(textFieldRepeatPasswd.Text);
-            if (textFieldIPaddress.Text != "26.13.90.183")
+            if (textFieldIPaddress.Text == "127.0.0.1" || textFieldIPaddress.Text == "localhost")
             {
-                MessageBox.ErrorQuery(30,10, "Error", "Incorrect or inexistent IP Address", "OK");
+                ipAddress = Convert.ToString(textFieldIPaddress.Text);
+            }
+            else
+            {
+                MessageBox.ErrorQuery(30, 10, "Error", "Incorrect or inexistent IP Address", "OK");
                 return;
             }
-            ipAddress = Convert.ToString(textFieldIPaddress.Text); 
             if (pass1 == pass2)
             {
 
@@ -305,8 +336,13 @@ namespace DotChat
 
                 if (int_token != -1)
                 {
-                    int_token2 = int_token;
+                    if (secondTimeVis == true)
+                    {
+                        SendMessage(new Message($"User {fieldUsername.Text} disconnected", ""));
+                    }
                     fieldUsername.Text = auth_data.login;
+                    int_token2 = int_token;
+                    secondTimeVis = true;
                     SendMessage(new Message($"User {fieldUsername.Text} is registered", ""));
                     isLog = true;
                     leaveWithoLog = false;
@@ -438,12 +474,15 @@ namespace DotChat
         }
         static void LoginClick()
         {
-            if (textFieldIPaddressLog.Text != "26.13.90.183")
+            if (textFieldIPaddressLog.Text == "127.0.0.1" || textFieldIPaddressLog.Text == "localhost")
+            {
+                ipAddress = Convert.ToString(textFieldIPaddressLog.Text);
+            }
+            else
             {
                 MessageBox.ErrorQuery(30, 10, "Error", "Incorrect or inexistent IP Address", "OK");
                 return;
             }
-            ipAddress = Convert.ToString(textFieldIPaddressLog.Text);
             string address = $"http://{ipAddress}:5000/api/Auth";
             string login = Convert.ToString(textFieldNameLog.Text);
             string passwd = Convert.ToString(textFieldPasswordLog.Text);
@@ -475,10 +514,15 @@ namespace DotChat
                     MessageBox.ErrorQuery(30, 10, "Error", "Inexistent username", "OK");
                     break;
                 default:
+                    if (secondTimeVis == true)
+                    {
+                        SendMessage(new Message($"User {fieldUsername.Text} disconnected", ""));
+                    }
                     fieldUsername.Text = login;
                     int_token2 = int_token;
                     isLog = true;
                     leaveWithoLog = false;
+                    secondTimeVis = true;
                     SendMessage(new Message($"User {fieldUsername.Text} is now online", ""));
                     Application.RequestStop();
                     break;
