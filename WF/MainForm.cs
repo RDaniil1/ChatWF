@@ -55,15 +55,13 @@ namespace DotChatWF
                 SendMessage(new Message(fieldUsername.Text + " succefully registered", ""));
                 leaveWithoRegForm = true;
             }
-            else if(!leaveWithoAuthForm && counterLog == 2)
+            if( (counterLog == 2 || counterReg == 2))
             {
                 SendMessage(new Message(prevUser + " disconnected", ""));
+                if(counterLog == 2)
                 counterLog--;
-            }
-            else if (!leaveWithoRegForm && counterReg == 2)
-            {
-                SendMessage(new Message(prevUser + " disconnected", ""));
-                counterReg--;
+                if (counterReg == 2)
+                    counterReg--;
             }
             Message msg = GetMessage(lastMsgID);
             //If message deleted, then refresh the listBox 

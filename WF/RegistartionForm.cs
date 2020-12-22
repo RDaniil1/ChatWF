@@ -72,6 +72,7 @@ namespace DotChatWF
                     MainForm.leaveWithoLog = false;
                     MainForm.leaveWithoRegForm = false;
                     MainForm.counterReg++;
+                    MainForm.counterLog++;
                     this.Visible = false;
         }
         else

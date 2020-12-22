@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\Server.csproj": {}
+    "D:\\Curse\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\Server.csproj": {
+    "D:\\Curse\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\Curse\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\Server.csproj",
+        "projectPath": "D:\\Curse\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\deagl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\obj\\",
+        "outputPath": "D:\\Curse\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\deagl\\AppData\\Roaming\\NuGet\\NuGet.Config",

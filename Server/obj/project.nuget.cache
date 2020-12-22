@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PptVrbkjxn6i91KX2Db15jfOo7jVFeULeb1D1Td8KNsx0bZwE4AAFvEu4Uzm9esv3OTKLiJuPnpieHywIm68Qw==",
+  "dgSpecHash": "XZ+ojv8bZQefFSoOohie0sWoPiRcj58JNSvcOY4lgavuQEF0rSqYEaQ7PRvGb1yOsTd3urs/iGd4SOGyOmXH9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\deagl\\Desktop\\BISO-02\\Server\\Server\\Server.csproj",
+  "projectFilePath": "D:\\Curse\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\deagl\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\deagl\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"

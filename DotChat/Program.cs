@@ -60,6 +60,8 @@ namespace DotChat
         private static int int_token2 = 0;
 
         private static bool leaveWithoLog = true;
+        public static int counterLog = 0;
+        public static int counterReg = 0;
 
         //For Login window
         private static Label labelNameLog;
@@ -89,6 +91,9 @@ namespace DotChat
         private static bool secondTimeVis = false;
         private static int lastMsgID;
         private static int messageCount = 0;
+        public static string prevUser;
+        public static bool leaveWithoAuthForm = true;
+        public static bool leaveWithoRegForm = true;
         static void Main(string[] args)
         {
             Application.Init();
@@ -200,6 +205,7 @@ namespace DotChat
             Timer updateLoop = new Timer();
             updateLoop.Interval = 1000;
             updateLoop.Elapsed += (object sender, ElapsedEventArgs e) => {
+                
                 Message msg = GetMessage(lastMsgID);
                 if (msg != null) {
                     messages.Add(msg);
@@ -346,6 +352,8 @@ namespace DotChat
                     SendMessage(new Message($"User {fieldUsername.Text} is registered", ""));
                     isLog = true;
                     leaveWithoLog = false;
+                    counterReg++;
+                    counterLog++;
                     Application.RequestStop();
                 }
                 else
@@ -361,6 +369,7 @@ namespace DotChat
 
         static void Register()
         {
+            prevUser = Convert.ToString(fieldUsername.Text);
             reg = new Dialog("Register");
 
             //Add button which create an account and connect to chat using his IP Address
@@ -450,6 +459,7 @@ namespace DotChat
                 Height = 1,
             };
             reg.Add(textFieldPassword);
+            
 
             textFieldRepeatPasswd = new TextField()
             {
@@ -523,6 +533,8 @@ namespace DotChat
                     isLog = true;
                     leaveWithoLog = false;
                     secondTimeVis = true;
+                    counterLog++;
+                    counterReg++;
                     SendMessage(new Message($"User {fieldUsername.Text} is now online", ""));
                     Application.RequestStop();
                     break;
@@ -531,6 +543,7 @@ namespace DotChat
 
         static void Login()
         {
+            prevUser = Convert.ToString(fieldUsername.Text);
             log = new Dialog("Login");
 
             //Add button which create an account and connect to chat using his IP Address

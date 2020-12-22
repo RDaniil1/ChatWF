@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rk7c3UCKw8wsqGwJcOhtjytb4aSCjabNXep2CEGKE/ZfcGeBuyhJegwC26qEnSYUHhg6UAqYibjzRRcU5H7Lgg==",
+  "dgSpecHash": "6KRvbvCak9CbXABhC96SEZS7UoUEUzPVWBLFe3tyPZ3u6K88ntNerGeiLIuIR2/X0bW73h7pOYMj+0+VRQbL7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\DotChat.csproj",
+  "projectFilePath": "D:\\Curse\\DotChat\\DotChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\deagl\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
     "C:\\Users\\deagl\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",

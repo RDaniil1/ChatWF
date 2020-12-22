@@ -89,6 +89,7 @@ namespace DotChatWF
                     MainForm.leaveWithoLog = false;
                     MainForm.leaveWithoAuthForm = false;
                     MainForm.counterLog++;
+                    MainForm.counterReg++;
                     mForm.Show();
                     Visible = false;
                     mForm.int_token = int_token;

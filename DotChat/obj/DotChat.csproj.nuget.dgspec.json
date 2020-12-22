@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\DotChat.csproj": {}
+    "D:\\Curse\\DotChat\\DotChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\DotChat.csproj": {
+    "D:\\Curse\\DotChat\\DotChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\DotChat.csproj",
+        "projectUniqueName": "D:\\Curse\\DotChat\\DotChat.csproj",
         "projectName": "DotChat",
-        "projectPath": "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\DotChat.csproj",
+        "projectPath": "D:\\Curse\\DotChat\\DotChat.csproj",
         "packagesPath": "C:\\Users\\deagl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deagl\\Desktop\\BISO-02\\DotChat\\obj\\",
+        "outputPath": "D:\\Curse\\DotChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\deagl\\AppData\\Roaming\\NuGet\\NuGet.Config",
