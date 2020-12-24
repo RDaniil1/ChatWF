@@ -32,7 +32,7 @@ namespace DotChatWF
     {
         string pass1 = TBPass1.Text;
         string pass2 = TBPass2.Text;
-            if(textBox1.Text == "localhost" || textBox1.Text == "127.0.0.1")
+            if(textBox1.Text == "26.13.90.183")
             {
                 MainForm.ipAddress = textBox1.Text;
             }

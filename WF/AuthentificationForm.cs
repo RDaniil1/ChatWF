@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DotChatWF
 {
@@ -26,12 +27,12 @@ namespace DotChatWF
         [Serializable]
         public class AuthData
         {
-            public string token { get; set; } = default;
+            
             public string login { get; set; } = default;
             public string password { get; set; } = default;
             public AuthData()
             {
-                token = default;
+                
                 login = default;
                 password = default;
             }
@@ -45,7 +46,7 @@ namespace DotChatWF
     {
 
            
-            if (textBox4.Text == "127.0.0.1" || textBox4.Text == "localhost")
+            if (textBox4.Text == "26.13.90.183")
             {
                 MainForm.ipAddress = textBox4.Text;
             }
@@ -76,6 +77,8 @@ namespace DotChatWF
             sr.Close();
 
             int int_token = Convert.ToInt32(content, 10);
+
+
             switch (int_token)
             {
                 case -1:

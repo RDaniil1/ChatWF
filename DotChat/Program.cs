@@ -94,6 +94,9 @@ namespace DotChat
         public static string prevUser;
         public static bool leaveWithoAuthForm = true;
         public static bool leaveWithoRegForm = true;
+
+        public static string user;
+        public static string messag;
         static void Main(string[] args)
         {
             Application.Init();
@@ -163,7 +166,7 @@ namespace DotChat
                 Height = 1,
             };
             winMain.Add(fieldUsername);
-            fieldUsername.Text = "Create your account or log into an existing one";
+            fieldUsername.Text = "Create your account or log in existing one";
             fieldUsername.ReadOnly = true;
 
         
@@ -225,7 +228,7 @@ namespace DotChat
                 }
                 else if (lastMsgID == messageCount)
                     messageCount = 0;
-
+                
             };
             updateLoop.Start();
             try
@@ -256,7 +259,7 @@ namespace DotChat
         static void MessagesUpdate() {
             winMessages.RemoveAll();
             int offset = 0;
-            for (var i = 0; i <= messages.Count - 1; i++) {
+            for (var i = messages.Count - 1; i >= 0; i--) {
                 View msg = new View() { 
                     X = 0, Y = offset,
                     Width = winMessages.Width,
@@ -270,10 +273,6 @@ namespace DotChat
             Application.Refresh();
         }
 
-        static void DeleteMsg()
-        {
-
-        }
       
         static void SendMessage(Message msg) {
             if (isLog) {
@@ -306,9 +305,11 @@ namespace DotChat
         }
         static void RegisterClick()
         {
+            user = Convert.ToString(textFieldName.Text);
+
             string pass1 = Convert.ToString(textFieldPassword.Text);
             string pass2 = Convert.ToString(textFieldRepeatPasswd.Text);
-            if (textFieldIPaddress.Text == "127.0.0.1" || textFieldIPaddress.Text == "localhost")
+            if (textFieldIPaddress.Text == "26.13.90.183")
             {
                 ipAddress = Convert.ToString(textFieldIPaddress.Text);
             }
@@ -344,16 +345,16 @@ namespace DotChat
                 {
                     if (secondTimeVis == true)
                     {
-                        SendMessage(new Message($"User {fieldUsername.Text} disconnected", ""));
+                        SendMessage(new Message($"User {user} disconnected", ""));
                     }
                     fieldUsername.Text = auth_data.login;
                     int_token2 = int_token;
                     secondTimeVis = true;
-                    SendMessage(new Message($"User {fieldUsername.Text} is registered", ""));
                     isLog = true;
                     leaveWithoLog = false;
                     counterReg++;
                     counterLog++;
+                    SendMessage(new Message($"User {user} is registered", ""));
                     Application.RequestStop();
                 }
                 else
@@ -484,7 +485,7 @@ namespace DotChat
         }
         static void LoginClick()
         {
-            if (textFieldIPaddressLog.Text == "127.0.0.1" || textFieldIPaddressLog.Text == "localhost")
+            if (textFieldIPaddressLog.Text == "26.13.90.183")
             {
                 ipAddress = Convert.ToString(textFieldIPaddressLog.Text);
             }

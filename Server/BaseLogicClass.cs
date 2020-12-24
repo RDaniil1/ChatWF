@@ -187,12 +187,7 @@ namespace Server
           login_exist = true;
           if (item.password == password)
           {
-
-            int token = GenToken();
-            tokens record_token = new tokens(token, login, password);
-            list_tokens.Add(record_token);
-            Console.WriteLine($"User {login} token: {token}");
-            return token;
+            return GenToken();
           }
           else
           {
@@ -222,8 +217,6 @@ namespace Server
         int token = GenToken();
         tokens record_token = new tokens(token, auth_data.login, auth_data.password);
         list_tokens.Add(record_token);
-        Console.WriteLine($"User {auth_data.login} with password {auth_data.password} has token: {token}");
-
         return token;
       }
       return -1;

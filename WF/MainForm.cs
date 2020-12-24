@@ -83,7 +83,6 @@ namespace DotChatWF
             }
             else if (lastMsgID == messageCount)
                 messageCount = 0;
-
         }
 
         private void btnSend_Click(object sender, EventArgs e) {

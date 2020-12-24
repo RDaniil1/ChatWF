@@ -101,7 +101,7 @@
             // updateLoop
             // 
             this.updateLoop.Enabled = true;
-            this.updateLoop.Interval = 1;
+            this.updateLoop.Interval = 1000;
             this.updateLoop.Tick += new System.EventHandler(this.updateLoop_Tick);
             // 
             // btnAuth
