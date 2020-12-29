@@ -96,7 +96,6 @@ namespace DotChat
         public static bool leaveWithoRegForm = true;
 
         public static string user;
-        public static string messag;
         static void Main(string[] args)
         {
             Application.Init();
