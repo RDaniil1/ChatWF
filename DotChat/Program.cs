@@ -309,7 +309,7 @@ namespace DotChat
 
             string pass1 = Convert.ToString(textFieldPassword.Text);
             string pass2 = Convert.ToString(textFieldRepeatPasswd.Text);
-            if (textFieldIPaddress.Text == "26.13.90.183")
+            if (textFieldIPaddress.Text == "25.92.120.226")
             {
                 ipAddress = Convert.ToString(textFieldIPaddress.Text);
             }
@@ -485,7 +485,7 @@ namespace DotChat
         }
         static void LoginClick()
         {
-            if (textFieldIPaddressLog.Text == "26.13.90.183")
+            if (textFieldIPaddressLog.Text == "25.92.120.226")
             {
                 ipAddress = Convert.ToString(textFieldIPaddressLog.Text);
             }

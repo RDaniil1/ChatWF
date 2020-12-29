@@ -46,7 +46,7 @@ namespace DotChatWF
     {
 
            
-            if (textBox4.Text == "26.13.90.183")
+            if (textBox4.Text == "25.92.120.226")
             {
                 MainForm.ipAddress = textBox4.Text;
             }
